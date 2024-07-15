@@ -55,12 +55,13 @@ def recommend_task():
         
         if not high_priority_tasks.empty:
             # Choose a random high-priority task
-            random_task = random.choice(high_priority_tasks['description'])
+            random_task = random.choice(high_priority_tasks['description'].tolist())
             print(f"Recommended task: {random_task} - Priority: High")
         else:
             print("No high-priority tasks available for recommendation.")
     else:
         print("No tasks available for recommendations.")
+
 
 # Main menu
 while True:
