@@ -35,7 +35,8 @@ def add_task(description, priority):
 
 # Function to remove a task by description
 def remove_task(description):
-    task = tasks[tasks['description'] != description]
+    global tasks  # Declare tasks as a global variable
+    tasks = tasks[tasks['description'] != description]
     save_tasks()
 
 # Function to list all tasks
